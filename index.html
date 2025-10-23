@@ -13,17 +13,34 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="search-player">
-        <input type="text" id="search-player" />
-        <button onclick="getPlayerDetails()">Send</button>
-      </div>
-      <div class="display-results" id="display-results"></div>
-    </div>
-
     <header>
-      <h1></h1>
+      <h1>Football Player Search</h1>
     </header>
+   
+    <main class="container">
+      <!--Search box -->
+      <div class="search-player">
+        <input
+          type="text"
+          id="search-player"
+          placeholder="Enter player name..."
+        />
+        <button onclick="getPlayerTeamDetails()">Search</button>
+      </div>
+
+      <!--Player info -->
+      <div class="display-results" id="display-results"></div>
+
+      <!-- Team info -->
+      <div class="team">
+        <div class="display-results" id="display-team"></div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; Adilson Cardoso. All rights reserved.</p>
+    </footer>
     <script src="index.js"></script>
+    
   </body>
+  
 </html>

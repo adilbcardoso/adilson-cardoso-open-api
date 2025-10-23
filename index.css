@@ -1,9 +1,95 @@
+header {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(11, 11, 11);
+  border-color: #4a0d84;
+  border-width: 10px;
+  text-shadow: 1px 1px 2px #8a2be2;
+}
+
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: hsla(295, 90%, 40%, 0.5);
+  box-sizing: border-box;
+}
+
+/*search box */
+.search-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-player input {
+  width: 250px;
+  max-width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-player button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #8a2be2;
+  color: white;
+  cursor: pointer;
+}
+
+.display-results {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: hsla(295, 90%, 40%, 0.5);
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Card styling */
+.player-card,
+.team-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+footer {
+  margin-top: 100px;
+  color: rgb(10, 10, 10);
+}
+
+/* Responsive*/
+@media (max-width: 500px) {
+  header {
+    font-size: 16px;
+  }
+  .search-player {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .player-card,
+  .team-card {
+    max-width: 90%;
+    font-size: 16px;
+  }
+  footer {
+    font-size: 16px;
+  }
 }
